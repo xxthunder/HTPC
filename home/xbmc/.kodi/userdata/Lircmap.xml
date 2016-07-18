@@ -1,0 +1,65 @@
+<!-- This file contains the mapping of LIRC keys to XBMC keys used in Keymap.xml  -->
+<!--                                                                              -->
+<!-- How to add remotes                                                           -->
+<!-- <remote device="name_Lirc_calls_the_remote">                                 -->
+<!--                                                                              -->
+<!-- For the commands the layout following layout is used                         -->
+<!-- <XBMC_COMMAND>LircButtonName</XBMC_COMMAND>                                  -->
+<!--                                                                              -->
+<!-- For a list of XBMC_COMMAND's check out the <remote> sections of keymap.xml   -->
+
+<lircmap>
+	<remote device="linux-input-layer">
+	<altname>cx23885_remote</altname>
+	<altname>devinput</altname>
+                <mute>BTN_LEFT</mute>
+                <teletext>KEY_SUBTITLE</teletext>
+                <language>BTN_RIGHT</language>
+		<menu>KEY_MENU</menu>
+		<info>KEY_CYCLEWINDOWS</info>
+		<back>KEY_ESC</back>
+		<title>KEY_DASHBOARD</title>
+                <myvideo>KEY_VIDEO</myvideo>
+                <mymusic>KEY_AUDIO</mymusic>
+		<mytv>KEY_TV</mytv>
+		<left>KEY_LEFT</left>
+		<right>KEY_RIGHT</right>
+		<up>KEY_UP</up>
+		<down>KEY_DOWN</down>
+		<select>KEY_ENTER</select>
+		<back>KEY_ESC</back>
+		<record>KEY_RECORD</record>
+		<play>KEY_PLAY</play>
+		<pause>KEY_PAUSE</pause>
+		<stop>KEY_STOP</stop>
+		<forward>KEY_FASTFORWARD</forward>
+		<reverse>KEY_REWIND</reverse>
+		<volumeplus>KEY_VOLUMEUP</volumeplus>
+		<volumeminus>KEY_VOLUMEDOWN</volumeminus>
+		<channelplus>KEY_CHANNELUP</channelplus>
+		<channelminus>KEY_CHANNELDOWN</channelminus>
+		<display>KEY_SCREEN</display>
+		<skipplus>KEY_NEXT</skipplus>
+		<skipminus>KEY_PREVIOUS</skipminus>
+		<mute>KEY_MUTE</mute>
+		<power></power>
+		<myvideo>KEY_VIDEO</myvideo>
+                <red>KEY_VIDEO</red>
+		<mymusic>KEY_AUDIO</mymusic>
+                <green>KEY_AUDIO</green>
+		<mypictures></mypictures>
+		<mytv>KEY_TV</mytv>
+		<yellow>KEY_TV</yellow>
+		<one>KEY_NUMERIC_1</one>
+		<two>KEY_NUMERIC_2</two>
+		<three>KEY_NUMERIC_3</three>
+		<four>KEY_NUMERIC_4</four>
+		<five>KEY_NUMERIC_5</five>
+		<six>KEY_NUMERIC_6</six>
+		<seven>KEY_NUMERIC_7</seven>
+		<eight>KEY_NUMERIC_8</eight>
+		<nine>KEY_NUMERIC_9</nine>
+		<zero>KEY_NUMERIC_0</zero>
+		<start></start>
+	</remote>
+</lircmap>
