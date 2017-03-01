@@ -1,0 +1,1 @@
+KERNEL=="lcd*",          , MODE:="664", GROUP="adm"
