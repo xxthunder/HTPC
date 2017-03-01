@@ -10,10 +10,9 @@
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
-echo "Setting up xorg ..."
+echo "Setting up sysctl ..."
 
-$SETUPROOT/setups/link.sh /etc/X11/xorg.conf
-$SETUPROOT/setups/link.sh /etc/X11/toshiba_lcd_edid.bin
+$SETUPROOT/setups/link.sh /etc/sysctl.conf
 
 echo "Done."
 

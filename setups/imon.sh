@@ -12,7 +12,6 @@ SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
 echo "Setting up imon ..."
 
-$SETUPROOT/setups/link.sh etc/udev/rules.d/imonlcd.rules
+$SETUPROOT/setups/link.sh /etc/udev/rules.d/imonlcd.rules
 
 echo "Done."
-
