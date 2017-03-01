@@ -131,37 +131,6 @@
       <launch_app2_pc_icon>ActivateWindow(MyPrograms)</launch_app2_pc_icon>
       <launch_file_browser/>
       <launch_media_center/>
-      <!-- ****************************************************** -->
-      <!-- MS Media Center keyboard shortcuts sent by MCE remotes -->
-      <!-- See http://msdn.microsoft.com/en-us/library/bb189249.aspx -->
-      <p mod="ctrl,shift">Play</p>        <!-- Play -->
-      <s mod="ctrl,shift">Stop</s>        <!-- Stop -->
-      <p mod="ctrl">Pause</p>             <!-- Pause -->
-      <f mod="ctrl,shift">FastForward</f> <!-- Fwd -->
-      <b mod="ctrl,shift">Rewind</b>      <!-- Rew -->
-      <f mod="ctrl">SkipNext</f>          <!-- Skip -->
-      <b mod="ctrl">SkipPrevious</b>      <!-- Replay -->
-      <d mod="ctrl">Info</d>              <!-- MCE Details -->
-      <r mod="ctrl">Record</r>            <!-- Record -->
-      <f4 mod="alt">PreviousMenu</f4>     <!-- Exit -->
-      <f10>VolumeUp</f10>                 <!-- MCE Vol up -->
-      <f9>VolumeDown</f9>                 <!-- MCE Vol down -->
-      <f8>Mute</f8>                       <!-- MCE mute -->
-      <g mod="ctrl">ActivateWindow(TVGuide)</g>  <!-- MCE Guide -->
-      <m mod="ctrl">ActivateWindow(music)</m>    <!-- MCE My music -->
-      <i mod="ctrl">ActivateWindow(pictures)</i> <!-- MCE My pictures -->
-      <e mod="ctrl">ActivateWindow(video)</e>    <!-- MCE videos -->
-      <m mod="ctrl,shift">PlayerControl(ShowVideoMenu)</m>         <!-- MCE DVD menu -->
-      <o mod="ctrl">ActivateWindow(TVRecordings)</o>  <!-- MCE Recorded TV -->
-      <t mod="ctrl">ActivateWindow(TVChannels)</t>  <!-- MCE Live TV  -->
-      <t mod="ctrl,shift">ActivateWindow(TVChannels)</t>  <!-- MCE My TV -->
-      <a mod="ctrl">ActivateWindow(RadioChannels)</a>  <!-- MCE My Radio -->
-      <!-- MCE keypresses without an obvious use in Kodi -->
-      <u mod="ctrl">Notification(MCEKeypress, DVD subtitle, 3)</u>
-      <a mod="ctrl,shift">Notification(MCEKeypress, DVD audio, 3)</a>
-      <k mod="ctrl,shift">ReloadKeymaps</k>
-      <d mod="ctrl,shift">ToggleDebug</d>
-      <r mod="ctrl,shift">ToggleDirtyRegionVisualization</r>
     </keyboard>
   </global>
   <LoginScreen>

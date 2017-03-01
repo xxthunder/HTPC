@@ -10,13 +10,20 @@
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
-echo "Creating link $1."
+if [ "$2" != "" ]
+then
+   USER=$2
+else
+   USER=root
+fi
+
+echo "Creating link $1 with user $USER."
 
 if [ -f $SETUPROOT$1 ]
 then
-   sudo mkdir -p $(dirname $1)
-   sudo rm -f $1 
-   sudo ln -s $SETUPROOT$1 $1
+   sudo -u $USER mkdir -p $(dirname $1)
+   sudo -u $USER rm -f $1 
+   sudo -u $USER ln -s $SETUPROOT$1 $1
    ls $1
 else
    echo "File to be linked to does not exist."
