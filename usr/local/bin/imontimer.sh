@@ -8,11 +8,11 @@
 #
 ##################################################
 
-THISROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
+THISROOT=$(pushd $(dirname $0) > /dev/null; pwd -P)
 
 echo "Wake up in $1 minutes."
 if [ "$1" -gt "0" ]
 then
-   perl -I$THISROOT/tools/imon/RFLib $THISROOT/tools/imon/lcdalarm.pl -m $1
+   perl -I$THISROOT/imon/RFLib $THISROOT/imon/lcdalarm.pl -m $1
 fi
 

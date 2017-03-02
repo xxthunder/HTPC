@@ -19,7 +19,7 @@ fi
 
 echo "Creating link $1 with user $USER."
 
-if [ -f $SETUPROOT$1 ]
+if [ -e $SETUPROOT$1 ]
 then
    sudo -u $USER mkdir -p $(dirname $1)
    sudo -u $USER rm -f $1 

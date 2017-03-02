@@ -8,7 +8,7 @@
 #
 ##################################################
 
-THISROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
+THISROOT=$(pushd $(dirname $0) > /dev/null; pwd -P)
 
 # get the relative time difference in seconds between next vdr timer and now
 wakeuptime=$(svdrpsend -d localhost NEXT rel|grep 250 |cut -f3 -d' '|tr -d '\r')
@@ -22,4 +22,4 @@ else
    echo "Currently recording."
 fi
 
-$THISROOT/bin/imontimer.sh $difftimeminutes
+$THISROOT/imontimer.sh $difftimeminutes
