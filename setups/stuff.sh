@@ -12,7 +12,7 @@ SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
 echo "Setting up sysctl ..."
 
-$SETUPROOT/setups/link.sh /etc/sysctl.conf
+$SETUPROOT/bin/link.sh /etc/sysctl.conf
 
 echo "Done."
 

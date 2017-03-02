@@ -12,7 +12,7 @@ SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
 echo "Setting up autologin ..."
 
-$SETUPROOT/setups/link.sh /etc/lightdm/lightdm.conf
+$SETUPROOT/bin/link.sh /etc/lightdm/lightdm.conf
 
 echo "Done."
 

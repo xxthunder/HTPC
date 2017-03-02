@@ -8,10 +8,13 @@
 #
 ##################################################
 
-SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
+SETUPROOT=$(pushd $(dirname $0) > /dev/null; pwd -P)
 
-echo "Setting up Kodi ..."
+echo "Setting up HTPC environment ..."
 
-$SETUPROOT/bin/link.sh /home/xbmc/.kodi/userdata/keymaps/keyboard.xml xbmc
+for i in $SETUPROOT/setups/*.sh
+do
+   echo "Running setup script $i"
+   $i
+done
 
-echo "Done."

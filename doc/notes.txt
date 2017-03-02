@@ -1,0 +1,4 @@
+Start stop Kodi session:
+
+sudo start lightdm
+sudo stop lightdm

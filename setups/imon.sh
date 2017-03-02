@@ -12,10 +12,9 @@ SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
 echo "Setting up imon ..."
 
-$SETUPROOT/setups/link.sh /etc/udev/rules.d/imonlcd.rules
-$SETUPROOT/setups/link.sh /usr/local/bin/vdrtimer.sh
-$SETUPROOT/setups/link.sh /usr/local/bin/imontimer.sh
-$SETUPROOT/setups/link.sh /usr/local/bin/imon
-$SETUPROOT/setups/link.sh /etc/init/vdr.conf
+$SETUPROOT/bin/link.sh /etc/udev/rules.d/imonlcd.rules
+$SETUPROOT/bin/link.sh /usr/local/bin/vdrtimer.sh
+$SETUPROOT/bin/link.sh /usr/local/bin/imontimer.sh
+$SETUPROOT/bin/link.sh /usr/local/bin/imon
  
 echo "Done."
