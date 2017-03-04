@@ -2,7 +2,7 @@
 
 ##################################################
 #
-# xorg setup for my HTPC
+# Some other stuff for my HTPC
 #
 # karsten.guenther@kamg.de
 #

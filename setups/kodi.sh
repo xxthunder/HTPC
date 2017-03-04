@@ -2,7 +2,7 @@
 
 ##################################################
 #
-# xorg setup for my HTPC
+# Kodi setup for my HTPC
 #
 # karsten.guenther@kamg.de
 #
