@@ -91,8 +91,8 @@
       <backslash>ToggleFullScreen</backslash>
       <home>FirstPage</home>
       <end>LastPage</end>
-      <power>ActivateWindow(shutdownmenu)</power>
-      <sleep>ActivateWindow(shutdownmenu)</sleep>
+      <power/>
+      <sleep/>
       <!-- PVR windows -->
       <e>ActivateWindow(TVGuide)</e>
       <h>ActivateWindow(TVChannels)</h>
