@@ -1,0 +1,66 @@
+<lcd>
+   <!-- advanced configurables, XML-uncomment and set options as desired -->
+
+   <!-- set this to video,music to disable the LCD on playback of music and video-->
+   <disableonplay>video</disableonplay>
+
+   <!-- scrollseparator: string to use as separator if text gets scrolled -->
+   <scrollseparator>  |  </scrollseparator>
+
+   <!-- progressbarsurroundings: put progress bars in square brackets (on/off) -->
+   <progressbarsurroundings>off</progressbarsurroundings>
+
+   <!-- icontextoffset: offset for text displayed after any play/pause icons -->
+   <!--icontextoffset>2</icontextoffset-->
+
+   <!-- allowemptylines: show text lines without contents or filter them (on/off) -->
+   <!--allowemptylines>off</allowemptylines-->
+
+   <!-- centerbigdigits: (try to) align big numbers centered on the display (on/off) -->
+   <!--centerbigdigits>off</centerbigdigits-->
+
+   <!-- disableplayindicatoronpause: turn off any playing indicator (extra stuff) when pausing playback (on/off) --> 
+   <disableplayindicatoronpause>on</disableplayindicatoronpause>
+
+   <extrabar2>menu</extrabar2>
+
+   <navigation>
+      <line>$INFO[System.Time]</line>
+      <line>$INFO[System.CurrentControl]</line>
+   </navigation>
+   <music>
+      <line>$INFO[MusicPlayer.Title]</line>
+      <line>$INFO[Player.Time]/$INFO[Player.Duration]</line>
+   </music>
+   <video>
+      <line>$INFO[VideoPlayer.Title]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+   </video>
+   <tvshow>
+      <line>$INFO[VideoPlayer.Title]</line>
+      <line>$INFO[LCD.ProgressBar]</line>
+   </tvshow> 
+   <general>
+      <line>$INFO[System.Time]</line>
+      <line>$INFO[System.CurrentControl]</line>
+   </general>
+   <screensaver>
+      <line>$INFO[System.CurrentWindow]</line>
+      <line>$INFO[LCD.TimeWide21]</line>
+      <line>$INFO[LCD.TimeWide22]</line>
+      <line>Freemem: $INFO[System.FreeMemory]</line>
+   </screensaver>
+   <xbelaunch>
+      <line></line>
+      <line>Playing</line>
+      <line>$INFO[System.LaunchXBE]</line>
+   </xbelaunch>
+   <pvrtv>
+      <line>$INFO[VideoPlayer.ChannelName]</line>
+      <line>$INFO[VideoPlayer.Title]</line>
+   </pvrtv>
+   <pvrradio>
+      <line>$INFO[MusicPlayer.ChannelName]</line>
+      <line>$INFO[MusicPlayer.Title]</line>
+   </pvrradio>
+</lcd>
