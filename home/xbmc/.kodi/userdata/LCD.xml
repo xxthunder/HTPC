@@ -1,9 +1,6 @@
 <lcd>
    <!-- advanced configurables, XML-uncomment and set options as desired -->
 
-   <!-- set this to video,music to disable the LCD on playback of music and video-->
-   <disableonplay>video</disableonplay>
-
    <!-- scrollseparator: string to use as separator if text gets scrolled -->
    <scrollseparator>  |  </scrollseparator>
 
@@ -57,10 +54,8 @@
    </xbelaunch>
    <pvrtv>
       <line>$INFO[VideoPlayer.ChannelName]</line>
-      <line>$INFO[VideoPlayer.Title]</line>
    </pvrtv>
    <pvrradio>
       <line>$INFO[MusicPlayer.ChannelName]</line>
-      <line>$INFO[MusicPlayer.Title]</line>
    </pvrradio>
 </lcd>
