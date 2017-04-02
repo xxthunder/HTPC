@@ -283,10 +283,10 @@
       <t>ShowSubtitles</t>
       <t mod="ctrl">SubtitleAlign</t>
       <l>NextSubtitle</l>
-      <up>StepBack</up>
-      <down>StepForward</down>
-      <right>ChapterOrBigStepForward</right>
-      <left>ChapterOrBigStepBack</left>
+      <up>ChapterOrBigStepBack</up>
+      <down>ChapterOrBigStepForward</down>
+      <right>StepForward</right>
+      <left>StepBack</left>
       <a>AudioDelay</a>
       <escape>Fullscreen</escape>
       <c>Playlist</c>
