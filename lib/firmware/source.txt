@@ -1,0 +1,3 @@
+https://forum.ubuntuusers.de/topic/dvb-c-t2-channel-conf/
+https://www.linuxtv.org/wiki/index.php/TechnoTrend_TT-TVStick_CT2-4400
+https://github.com/OpenELEC/dvb-firmware/tree/master/firmware
