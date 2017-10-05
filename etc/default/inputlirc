@@ -1,0 +1,2 @@
+EVENTS="/dev/input/myremote"
+OPTIONS="-g -m 0 -c"
