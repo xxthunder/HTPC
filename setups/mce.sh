@@ -14,7 +14,7 @@
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
-echo "Setting up imon_mce ..."
+echo "Setting up harmony_mce_keyboard ..."
 
 sudo apt-get install lirc
 sudo apt-get install ir-keytable
@@ -26,7 +26,7 @@ echo 'KERNEL=="event*",ATTRS{name}=="iMON Remote (15c2:0038)",SYMLINK="input/myr
 udevadm trigger
 
 $SETUPROOT/bin/link.sh /etc/rc.local
-$SETUPROOT/bin/link.sh /etc/rc_keymaps/imon_mce
+$SETUPROOT/bin/link.sh /etc/rc_keymaps/harmony_mce_keyboard
 $SETUPROOT/bin/link.sh /home/xbmc/.kodi/userdata/Lircmap.xml xbmc
 $SETUPROOT/bin/link.sh /etc/default/inputlirc
 $SETUPROOT/bin/link.sh /etc/lirc/hardware.conf

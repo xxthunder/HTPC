@@ -10,13 +10,13 @@
 
 <lircmap>
    <remote device="/dev/input/myremote">
-      <mute/>
-      <teletext></teletext>
-      <language></language>
-      <menu>KEY_MENU</menu>
+      <guide>KEY_MUTE</guide>
+      <teletext>KEY_GREEN</teletext>
+      <contentsmenu>KEY_MENU</contentsmenu>
+      <menu>KEY_DVD</menu>
       <info>KEY_INFO</info>
-      <back>KEY_DELETE</back>
-      <title></title>
+      <back>KEY_BACKSPACE</back>
+      <title>KEY_ESC</title>
       <left>KEY_LEFT</left>
       <right>KEY_RIGHT</right>
       <up>KEY_UP</up>
@@ -28,21 +28,16 @@
       <stop>KEY_STOP</stop>
       <forward>KEY_FASTFORWARD</forward>
       <reverse>KEY_REWIND</reverse>
-      <volumeplus></volumeplus>
-      <volumeminus></volumeminus>
+      <volumeplus>KEY_VOLUMEUP</volumeplus>
+      <volumeminus>KEY_VOLUMEDOWN</volumeminus>
       <channelplus>KEY_CHANNELUP</channelplus>
       <channelminus>KEY_CHANNELDOWN</channelminus>
-      <display></display>
       <skipplus>KEY_NEXT</skipplus>
       <skipminus>KEY_PREVIOUS</skipminus>
-      <mute></mute>
-      <power></power>
-      <myvideo></myvideo>
-      <red>KEY_TV</red>
-      <mymusic></mymusic>
-      <green>KEY_VIDEO</green>
+      <livetv>KEY_TV</livetv>
+      <liveradio>KEY_VIDEO</liveradio>
       <mypictures>KEY_CAMERA</mypictures>
-      <mytv></mytv>
+      <recordedtv>KEY_PVR</recordedtv>
       <yellow>KEY_AUDIO</yellow>
       <one>KEY_NUMERIC_1</one>
       <two>KEY_NUMERIC_2</two>
@@ -54,6 +49,5 @@
       <eight>KEY_NUMERIC_8</eight>
       <nine>KEY_NUMERIC_9</nine>
       <zero>KEY_NUMERIC_0</zero>
-      <start></start>
    </remote>
 </lircmap>

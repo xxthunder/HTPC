@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-ir-keytable -c -w /etc/rc_keymaps/imon_mce
+ir-keytable -c -w /etc/rc_keymaps/harmony_mce_keyboard
 
 exit 0

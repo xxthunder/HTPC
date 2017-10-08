@@ -1,6 +1,7 @@
 # HTPC
-Collection of scripts for customizing Ubuntu 14.04 LTS for my HTPC
+Collection of scripts for customizing Ubuntu 14.04.5 LTS for my HTPC
 
 Some specs:
 * Antec Fusion Remote case with IMON LCD
-* Controlled by Harmony Companion with Hub via Bluetooth 
+* Controlled via Harmony Companion with hub
+* Kodi with VDR as PVR backend 
