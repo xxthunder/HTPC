@@ -1,0 +1,19 @@
+== HTPC
+
+This repo contains a collection of scripts and system config files of my HTPC.
+
+=== Specification
+* Antec Fusion Remote (Silver) with IMON LCD
+* Controlled via Harmony Companion with hub
+* Ubuntu 14.04.5 LTS
+* LightDM with Kodi as frontend
+* VDR as PVR backend 
+
+=== Notes
+* Start stop Kodi session:
+
+[source,console]
+....
+sudo start lightdm
+sudo stop lightdm
+....

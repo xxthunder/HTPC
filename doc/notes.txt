@@ -1,8 +1,0 @@
-Start stop Kodi session:
-
-sudo start lightdm
-sudo stop lightdm
-
-Disable shutdown when power button is pressed:
-sudo nano /etc/systemd/logind.conf
-HandlePowerKey=ignore

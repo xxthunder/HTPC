@@ -1,12 +1,6 @@
 #!/bin/bash -e
 
-##################################################
-#
-# Create a system config file
-#
-# karsten.guenther@kamg.de
-#
-##################################################
+### Create a system config file ###
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 

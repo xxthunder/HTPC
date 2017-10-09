@@ -1,12 +1,6 @@
 #!/bin/bash -e
 
-##################################################
-#
-# VDR HTPC setup
-#
-# karsten.guenther@kamg.de
-#
-##################################################
+### VDR HTPC setup ###
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 

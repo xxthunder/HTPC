@@ -11,11 +11,6 @@
 #  Inspired by RFLibs created by Ronald Frazier
 #	http://www.ronfrazier.net
 #
-#  Revision:     $Rev$  
-#  Author:       $Author$  
-#  Date:         $Date$
-#  URL:          $HeadURL$  
-#
 #######################################################
 
 use Date::Calc;

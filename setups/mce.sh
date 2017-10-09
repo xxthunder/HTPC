@@ -8,8 +8,6 @@
 # Based on this howto:
 # http://kodi.wiki/view/HOW-TO:Setup_an_MCE_remote_control_in_Linux
 #
-# karsten.guenther@kamg.de
-#
 ##################################################
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)

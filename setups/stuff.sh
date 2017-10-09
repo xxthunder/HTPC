@@ -1,12 +1,6 @@
 #!/bin/bash -e
 
-##################################################
-#
-# Some other stuff for my HTPC
-#
-# karsten.guenther@kamg.de
-#
-##################################################
+### Some other system config stuff ###
 
 SETUPROOT=$(pushd $(dirname $0)/.. > /dev/null; pwd -P)
 
