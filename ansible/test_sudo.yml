@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: "sudo to root"
+    command: /usr/bin/whoami
+    register: out
+  - debug: var=out.stdout_lines
