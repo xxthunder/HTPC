@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Add Team KODI stable repository
+    apt_repository:
+      repo='ppa:team-xbmc/ppa' state=present
+  - name: Install Kodi
+    apt:
+      pkg=kodi state=installed update_cache=true

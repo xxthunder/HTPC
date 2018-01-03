@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Add YAVDR repositories
+    apt_repository:
+      repo='ppa:yavdr/main' state=present
+      repo='ppa:yavdr/stable-vdr' state=present
+  - name: Install VDR
+    apt:
+      pkg=vdr state=installed update_cache=true
+    notify:
+      - start vdr
+  handlers:
+  - name: start vdr
+    service: name=vdr state=started
