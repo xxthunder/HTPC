@@ -1,0 +1,26 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Add YAVDR repositories
+    apt_repository:
+      repo='ppa:yavdr/main' state=present
+      repo='ppa:yavdr/stable-vdr' state=present
+  - name: Install VDR
+    apt:
+      pkg=vdr state=installed update_cache=true
+  - name: Configure VDR
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - etc/default/vdr
+      - etc/vdr/conf.d/00-vdr.conf
+      - etc/init/vdr.conf
+      # Firmware for HMP-Combo DVB C/T2 USB tuner
+      - lib/firmware/dvb-demod-si2168-a30-01.fw
+      - lib/firmware/dvb-demod-si2168-b40-01.fw
+  - name: Start VDR
+    service: name=vdr state=restarted
