@@ -1,0 +1,47 @@
+##################################################
+#
+# IMON MCE remote setup for my HTPC (Harmony configuration: Microsoft MCE Keyboard)
+#
+# Based on this howto: http://kodi.wiki/view/HOW-TO:Setup_an_MCE_remote_control_in_Linux
+#
+##################################################
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install LIRC
+    apt:
+      pkg: "{{ item }}"
+      state: installed
+      update_cache: false
+    with_items:
+      - lirc
+      - ir-keytable
+      - inputlirc
+  - name: configure LIRC
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - etc/udev/rules.d/10-persistent-ir.rules
+      - etc/rc_keymaps/harmony_mce_keyboard
+      - etc/default/inputlirc
+      - etc/lirc/hardware.conf
+      - etc/lirc/lircd.conf
+      - etc/lirc/lircmd.conf
+  - name: Create keymap load script
+    copy:
+      src: etc/rc.local
+      dest: /etc/rc.local
+      mode: 0755
+      backup: yes
+  - name: Restart udev
+    service: name=udev state=reloaded
+  - name: Trigger kernel events
+    shell: udevadm trigger
+  - name: Load keymap
+    shell: /etc/rc.local
+  - name: Restart LIRC
+    service: name=inputlirc state=restarted

@@ -5,6 +5,6 @@
   - name: Add Team KODI stable repository
     apt_repository:
       repo='ppa:team-xbmc/ppa' state=present
-  - name: Install Kodi
+  - name: Install KODI
     apt:
       pkg=kodi state=installed update_cache=true
