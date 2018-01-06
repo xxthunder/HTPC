@@ -1,0 +1,35 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install lcdproc
+    apt:
+      pkg: lcdproc
+      state: installed
+      update_cache: false
+  - name: Stop lcdproc
+    service: name=lcdproc state=stopped
+  - name: configure lcdproc
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - etc/udev/rules.d/imonlcd.rules
+      - etc/LCDd.conf
+      - etc/init/lcdproc.conf
+  - name: create LCD timer scripts
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0755
+      backup: no
+    with_items:
+      - usr/local/bin/vdrtimer.sh
+      - usr/local/bin/imontimer.sh
+      - usr/local/bin/lcdalarm.pl 
+  - name: disable lcdproc startup
+    shell: find /etc -name "*LCDd" | grep "/etc/rc.*\.d/" | xargs sudo rm -f
+  - name: Start lcdproc
+    service: name=lcdproc state=started

@@ -10,3 +10,4 @@
       backup: yes
     with_items:
       - .kodi/userdata/Lircmap.xml
+      - .kodi/userdata/LCD.xml
