@@ -1,0 +1,28 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Do not lock the dvd drive
+    lineinfile:
+      path: /etc/sysctl.conf
+      regexp: 'dev\.cdrom\.lock=.*'
+      line: 'dev.cdrom.lock=0'
+      backrefs: yes
+      backup: yes
+  - name: Do not lock the dvd drive
+    lineinfile:
+      path: /etc/sysctl.conf
+      line: 'dev.cdrom.lock=0'
+      state: present
+  - name: Ignore the power key
+    lineinfile:
+      path: /etc/systemd/logind.conf
+      regexp: 'HandlePowerKey=.*'
+      line: 'HandlePowerKey=ignore'
+      backrefs: yes
+      backup: yes
+  - name: Ignore the power key
+    lineinfile:
+      path: /etc/systemd/logind.conf
+      line: 'HandlePowerKey=ignore'
+      state: present
