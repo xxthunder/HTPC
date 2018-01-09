@@ -5,9 +5,9 @@
   - name: configure KODI
     copy:
       src: "{{ item }}"
-      dest: "~/{{ item }}"
+      dest: "~/.{{ item }}"
       mode: 0644
       backup: yes
     with_items:
-      - .kodi/userdata/Lircmap.xml
-      - .kodi/userdata/LCD.xml
+      - kodi/userdata/Lircmap.xml
+      - kodi/userdata/LCD.xml
