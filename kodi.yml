@@ -1,10 +1,25 @@
 ---
 - hosts: all
-  become: yes
   tasks:
   - name: Add Team KODI stable repository
+    become: yes
     apt_repository:
       repo='ppa:team-xbmc/ppa' state=present
   - name: Install KODI
+    become: yes
     apt:
       pkg=kodi state=installed update_cache=true
+  - name: Ensure config path(s) exist
+    file:
+      path: "~/.kodi/userdata"
+      state: directory
+      recurse: yes
+  - name: configure KODI
+    copy:
+      src: "{{ item }}"
+      dest: "~/.{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - kodi/userdata/Lircmap.xml
+      - kodi/userdata/LCD.xml

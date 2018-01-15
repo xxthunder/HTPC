@@ -1,0 +1,54 @@
+---
+- hosts: all
+  tasks:
+  - name: Install all stuff needed to create picons
+    become: yes
+    apt:
+      pkg: "{{ item }}"
+      state: installed
+      update_cache: false
+    with_items:
+      - git
+      - binutils
+      - pngquant
+      - imagemagick
+      - librsvg2-bin
+      - jq
+  - name: Ensure target path(s) exist
+    become: yes
+    file:
+      path: "{{ picons_dir }}"
+      state: directory
+      mode: 0755
+      recurse: yes     
+  - name: copy creation script
+    become: yes
+    copy:
+      src: picons.sh
+      dest: "{{ picons_dir }}/picons.sh"
+      mode: 0755
+      backup: no
+  - name: Create picons
+    become: yes
+    shell: "{{ picons_dir }}/picons.sh 2>&1 > {{ picons_dir }}/picons.log"
+  - name: Ensure Kodi's VNSI config path(s) exist
+    file:
+      path: "~/.kodi/userdata/addon_data/pvr.vdr.vnsi"
+      state: directory
+      recurse: yes
+  - name: create Kodi's VNSI config file
+    copy:
+      src: "{{ item }}"
+      dest: "~/.{{ item }}"
+      mode: 0644
+      backup: yes
+      force: no
+    with_items:
+      - kodi/userdata/addon_data/pvr.vdr.vnsi/settings.xml
+  - name: Configure picons path
+    lineinfile:
+      path: "~/.kodi/userdata/addon_data/pvr.vdr.vnsi/settings.xml"
+      regexp: '.*<setting id="iconpath".*'
+      line: '<setting id="iconpath" value="{{ picons_dir }}/vnsi" />'
+      backrefs: yes
+      backup: yes
