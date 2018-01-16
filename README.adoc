@@ -9,6 +9,24 @@ This repo contains a collection of scripts and system config files of my HTPC.
 * LightDM with Kodi as frontend
 * VDR as PVR backend 
 
+=== Playbooks
+Ansible playbooks for configuration.
+
+==== Kodi
+Installation of Kodi media center from official PPA.
+
+==== VDR
+Installation of VDR from stable PPA of yavdr.
+
+==== IMON
+Installation and configuration of lcdproc for IMON lcd.
+
+==== Remote
+Installation and configuration of inputlirc for Harmony MCE control.
+
+==== Picons
+Create and configures tv channel icons for Kodi's VNSI addon.
+
 === Notes
 * Start stop Kodi session:
 
