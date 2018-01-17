@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install LightDM
+    apt:
+      pkg=lightdm state=installed update_cache=false
+  - name: Configure LightDM
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - etc/lightdm/lightdm.conf

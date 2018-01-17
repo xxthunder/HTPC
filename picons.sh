@@ -15,6 +15,7 @@ fi
 
 pushd $PICONS_SOURCE_DIR
 
+git reset --hard HEAD
 git pull
 rm -rf build-input/* build-output/*
 echo '256x256;226x226;light;transparent' > build-input/backgrounds.conf

@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Configure XOrg
+    copy:
+      src: "{{ item }}"
+      dest: "/{{ item }}"
+      mode: 0644
+      backup: yes
+    with_items:
+      - etc/X11/xorg.conf
+      - etc/X11/toshiba_lcd_edid.bin
