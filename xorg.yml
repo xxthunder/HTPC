@@ -2,6 +2,11 @@
 - hosts: all
   become: yes
   tasks:
+  - name: Install read-edid
+    apt:
+      pkg=read-edid state=installed update_cache=false
+  - name: Create TV's edid
+    shell: "get-edid > /etc/X11/edid.bin"
   - name: Configure XOrg
     copy:
       src: "{{ item }}"
@@ -10,4 +15,3 @@
       backup: yes
     with_items:
       - etc/X11/xorg.conf
-      - etc/X11/toshiba_lcd_edid.bin
