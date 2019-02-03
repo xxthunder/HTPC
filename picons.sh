@@ -10,7 +10,7 @@ PICONS_OUT_DIR=$SETUPROOT/vnsi
 # Get repo
 if [ ! -d "$PICONS_SOURCE_DIR" ]
 then
-   git clone https://github.com/picons/picons-source.git $PICONS_SOURCE_DIR
+   git clone https://github.com/xxthunder/picons.git $PICONS_SOURCE_DIR
 fi
 
 pushd $PICONS_SOURCE_DIR
